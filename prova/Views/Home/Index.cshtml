@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Página Inicial";
+}
+
+<div class="text-center mt-5">
+    <h1 class="display-4">Sistema de Gestão de Treinos</h1>
+    <p class="lead">Bem-vindo ao sistema de controle da academia.</p>
+    <hr />
+    
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Personais</h5>
+                    <p class="card-text">Gerencie os instrutores da academia.</p>
+                    <a asp-controller="Personal" asp-action="Index" class="btn btn-primary">Ir para Personais</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

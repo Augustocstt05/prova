@@ -1,0 +1,41 @@
+﻿@model prova.Models.Personal
+
+@{
+    ViewData["Title"] = "Cadastrar Personal";
+}
+
+<div class="container">
+    <h2 class="mt-4">Cadastrar Novo Personal</h2>
+    <hr />
+
+    <div class="row">
+        <div class="col-md-6">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Nome" class="control-label">Nome Completo</label>
+                    <input asp-for="Nome" class="form-control" placeholder="Ex: Rodrigo Silva" />
+                    <span asp-validation-for="Nome" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-4">
+                    <label asp-for="Especialidade" class="control-label">Especialidade</label>
+                    <input asp-for="Especialidade" class="form-control" placeholder="Ex: Musculação / Crossfit" />
+                    <span asp-validation-for="Especialidade" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success">Salvar Cadastro</button>
+                    <a asp-action="Index" class="btn btn-outline-secondary ms-2">Voltar para Lista</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
